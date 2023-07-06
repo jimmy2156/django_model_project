@@ -1,0 +1,15 @@
+{% extends "polls/base.html" %}
+
+{% block title %}
+Main Page
+{% endblock %}
+{% block content %}
+<ul>
+    <h1> There are total {{ num_books }} books</h1>
+    <h1>The average rating of book is {{ average_rating.rating__avg }}</h1>
+
+    {% for book in books %}
+    <li><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

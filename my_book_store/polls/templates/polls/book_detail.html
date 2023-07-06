@@ -1,0 +1,15 @@
+{% extends "polls/base.html" %}
+
+{% block title %}
+Single Page
+{% endblock %}
+{% block content %}
+<h1>{{ single_book.title }}</h1>
+<h2>{{ single_book.author }}</h2>
+<h3>{{ single_book.rating }}</h3>
+{% if single_book.is_bestselling == True %}
+<h4>It is bestselling </h4>
+{% else %}
+<h4>it is not bestselling </h4>
+{% endif %}
+{% endblock %}
